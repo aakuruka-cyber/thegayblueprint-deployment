@@ -40,7 +40,7 @@ jobs:
           
           port: ${{ secrets.SFTP_PORT }}
           
-          ssh_private_key: "" # Not using SSH key
+          ssh_private_key: ""
           
           password: ${{ secrets.SFTP_PASSWORD }}
           
@@ -50,7 +50,13 @@ jobs:
           
           args: "-o ConnectTimeout=5"
           
+          delete_remote_files: false
+          
+          exclude: ".github/**"
+          
 concurrency: 
+
+
 
 
 
